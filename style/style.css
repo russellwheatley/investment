@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+
+* {
+margin: 0;
+padding:0;
+border:0;
+}
+
+html,body, #root, #app {
+  height:100%;
+}
+
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  color: #8585ad;
+}
+
+/*universal settings start*/
+
+@media screen and (max-width: 580px) {
+    body {
+        font-size: 8px;
+    }
+    h3{
+      font-size: 12px;
+    }
+
+    img{
+      width:80%;
+    }
+
+}
+
+a.nav-button{
+  background: #ff998a;
+  color: white;
+  display: block;
+  text-align: center;
+  border-radius: 5px;
+  padding: 10px 0;
+  margin-bottom: 20px;
+  text-decoration: none;
+}
+
+/* if level selected, the button changes colour */
+.levels.wrapper.highlight-level{
+  background:#575a9d;
+  color:white;
+}
+
+/*universal settings end*/
+
+
+/* <--------- header container start ----------> */
+
+.sub-header:first-child {
+  background:#4b5588;
+}
+
+.sub-header:nth-child(2) {
+  background: #424a7b;
+  color:white;
+  padding:5px 0 5px 7px;
+}
+
+/* <------- header container end ------> */
+
+/* <-------- investment portfolio container start --------> */
+
+#investment-portfolio {
+  margin-top: 30px;
+}
+
+/* investment calculator row start */
+.investment-calculator-wrapper {
+  background: #f8f9fb;
+  padding-bottom: 25px;
+}
+
+.investment-calculator-wrapper > h3 {
+  padding-left: 15px;
+}
+
+/* investment calculator row end */
+
+/* choose level row start */
+
+.choose-level-wrapper {
+  background: #f8f9fb;
+  padding:20px;
+}
+
+
+.levels.wrapper {
+  background:white;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.levels.wrapper:hover {
+  background: #575a9d;
+  color:white;
+  cursor: pointer;
+}
+
+.levels.wrapper > img {
+  pointer-events: none;
+}
+
+.levels.wrapper > span {
+  padding-left: 20px;
+  pointer-events: none;
+}
+
+.level-space {
+  background:#f8f9fb;
+}
+/* choose level row end */
+
+/* about level row start */
+
+.about-level-wrapper{
+  background: #575a9d;
+  color: white;
+}
+
+.about-level-wrapper > h3 {
+  padding-left: 15px;
+}
+
+.about-level-wrapper > p {
+  padding: 15px;
+  min-height: 100px; /* stops page jump when changing data */
+}
+/* about level row end */
+
+/* <------------ investment portfolio container end --------> */
+
+/* <------------ funds breakdown container start --------> */
+
+/* funds breakdown (radar chart & table) start */
+
+
+h3.funds-breakdown-header {
+  text-align: center;
+  border-top: 1px solid rgba(204,204,204,0.5);
+  border-bottom: 1px solid rgba(204,204,204,0.5);
+  padding:15px 0;
+}
+
+.radar-chart-wrapper {
+  margin-top: 65px;
+}
+
+.funds-table.table {
+  font-size: 12px;
+}
+
+.funds-table.table thead {
+  font-size:14px;
+}
+
+.funds-table.table tfoot td {
+  font-size:14px;
+  color:white;
+  background: #575a9d;
+}
+
+/*border radius for total values row */
+.funds-table.table tfoot > tr:first-child td:first-child {
+   border-top-left-radius: 5px;
+   border-bottom-left-radius: 5px;
+}
+
+.funds-table.table tfoot > tr:first-child td:last-child {
+   border-top-right-radius: 5px;
+   border-bottom-right-radius: 5px;
+}
+
+/* remove last elements top border in table*/
+.funds-table.table tfoot > tr > td{
+  border-top: 0;
+}
+
+/* funds breakdown (radar chart & table) end */
+
+
+/* <------------ funds breakdown container end --------> */
+
+/* <------------ charges container start --------> */
+
+/* charges table start */
+
+h3.charges-header {
+  text-align: center;
+  border-top: 1px solid rgba(204,204,204,0.5);
+  border-bottom: 1px solid rgba(204,204,204,0.5);
+  padding:15px 0;
+}
+
+table.charges-table thead tr td {
+  background: #ffc4be;
+  color: white;
+  font-size: 14px;
+}
+
+table.charges-table tr td {
+  background: #f7f8fa;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  font-size:12px;
+}
+
+/* first data cells wider */
+table.charges-table tr td:first-child {
+  width: 65%;
+}
+
+table.charges-table tbody td:last-child {
+  font-weight: 700;
+}
+
+/* charges table end */
+
+/* <------------ charges container end --------> */
+
+/* <------------ investment container start --------> */
+
+#investment{
+  margin-top:30px;
+}
+
+.investment-wrapper > div.row {
+    margin-top:20px;
+}
+/* <------------ investment container end --------> */

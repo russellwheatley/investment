@@ -1,23 +1,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import { createStore, applyMiddleware } from 'redux';
-import {Router, Route, IndexRoute, browserHistory} from 'react-router';
-import reduxThunk from 'redux-thunk';
-import App from './containers/app';
-import Homepage from './containers/homepage';
+import { createStore, applyMiddleware} from 'redux';
+import {Router, Route, browserHistory} from 'react-router';
+import multi from 'redux-multi';
 import reducers from './reducers';
 
-const createStoreWithMiddleware = applyMiddleware(reduxThunk)(createStore);
+//containers
+import Investment from './containers/investment';
+import Homepage from './containers/homepage';
+
+//redux-multi to allow more than one action call
+const createStoreWithMiddleware = applyMiddleware(multi)(createStore);
+const store = createStoreWithMiddleware(reducers);
 
 ReactDOM.render(
-  <Provider store={createStoreWithMiddleware(reducers)}>
-  <Router history={browserHistory}>
-      <Route path="/" component={App}>
-      <IndexRoute component={Homepage}/>
-
-    </Route>
-  </Router>
-
+  <Provider store={store}>
+    <Router history={browserHistory}>
+      <Route path="/" component={Homepage}/>
+      <Route path="/investment" component={Investment} />
+    </Router>
   </Provider>
   , document.getElementById('root'));
